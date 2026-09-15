@@ -6,36 +6,35 @@ package lab1;
 class FizzBuzz {
 
     public static void main(String[] args) {
-
-        int i = 0;
-        while (i < 100) {
-            i = fizzBuzz(i);
-        }
+        fizzBuzz(100);
     }
 
-    private static int fizzBuzz(int i) {
-        i++;
-        // Find out which numbers divide i.
-        boolean divisibleBy3 = i % 3 == 0;
-        boolean divisibleBy5 = i % 5 == 0;
+    public static int fizzBuzz(int n) {
+        int i = 0;
+        while (i < n) {
+            i++;
+            // Find out which numbers divide i.
+            boolean divisibleBy3 = i % 3 == 0;
+            boolean divisibleBy5 = i % 5 == 0;
 
-        // Print our appropriate result.
-        if (divisibleBy3 && divisibleBy5) {
+            // Print our appropriate result.
+            if (divisibleBy3 && divisibleBy5) {
 
-            System.out.println("Fizz Buzz");
+                System.out.println("Fizz Buzz");
 
-        } else if (divisibleBy3) {
+            } else if (divisibleBy3) {
 
-            System.out.println("Fizz");
+                System.out.println("Fizz");
 
-        } else if (divisibleBy5) {
+            } else if (divisibleBy5) {
 
-            System.out.println("Buzz");
+                System.out.println("Buzz");
 
-        } else {
+            } else {
 
-            System.out.println(i);
+                System.out.println(i);
 
+            }
         }
         return i;
     }
